@@ -1,0 +1,63 @@
+/* Top bar */
+.top-bar {
+  background: #5a1d1d;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+}
+
+/* Contact bar */
+.contact-bar {
+  background: #a00000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+/* Main header */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background: #f3f3f3;
+}
+
+/* Address */
+.address h2 {
+  color: orange;
+  margin-bottom: 10px;
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: purple;
+}
+
+/* Info */
+.info h3 {
+  color: black;
+}
+
+/* Menu */
+.menu {
+  background: #a00000;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 15px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  color: gold;
+}
