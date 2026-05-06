@@ -1,18 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
-import Products from './pages/Products'
-import Header from './components/Header'
+import './App.css';
+import Products from './pages/Products';
+import Header from './components/Header';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import SafetyTips from './pages/SafetyTips';
+import AboutUs from './pages/AboutUs';
+// import CartPage if you have it
+
 function App() {
-  return(
-    <>
-      <Header/>
-  
-      <Products/>
-    </>
-  )
+  return (
+    <Router>
+
+      <Header />
+
+      <Routes>
+        <Route path="/" element={<Products />} />
+        <Route path="/safety-tips" element={<SafetyTips/>} />
+        <Route path='/about' element={<AboutUs/>}/>
+      </Routes>
+
+    </Router>
+  );
 }
 
-export default App
+export default App;

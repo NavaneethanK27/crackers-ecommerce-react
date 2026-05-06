@@ -1,13 +1,14 @@
+import { Link } from "react-router-dom";
+import logo from "../assets/Logo/logo.png";
+
 function Header() {
   return (
     <>
-      {/* Top Info Bar */}
       <div className="top-bar">
         Once order Submitted WhatsApp Us for further updates.
         <span> 8668125458 | 9751660227</span>
       </div>
 
-      {/* Contact Bar */}
       <div className="contact-bar">
         <div className="left">
           📧 npcrackers@gmail.com
@@ -17,7 +18,6 @@ function Header() {
         </div>
       </div>
 
-      {/* Main Header */}
       <div className="main-header">
         <div className="address">
           <h2>Address</h2>
@@ -27,9 +27,9 @@ function Header() {
           </p>
         </div>
 
-        <div className="logo">
-          🧨 NP CRACKERS
-        </div>
+          <div className="logo">
+            <img src={logo} alt="logo" />
+          </div>
 
         <div className="info">
           <h3>100% Satisfaction</h3>
@@ -37,13 +37,12 @@ function Header() {
         </div>
       </div>
 
-      {/* Navbar */}
       <div className="menu">
-        <a href="#">HOME</a>
-        <a href="#">ABOUT US</a>
-        <a href="#">QUICK PURCHASE</a>
-        <a href="#">SAFETY TIPS</a>
-        <a href="#">CONTACT US</a>
+        <Link to="/">HOME</Link>
+        <Link to="/about">ABOUT US</Link>
+        <Link to="/quick">QUICK PURCHASE</Link>
+        <Link to="/safety-tips">SAFETY TIPS</Link>
+        <Link to="/contact">CONTACT US</Link>
       </div>
     </>
   );
