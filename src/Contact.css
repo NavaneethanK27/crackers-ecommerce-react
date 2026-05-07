@@ -1,0 +1,133 @@
+.contact-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #f8fafc;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.contact-title {
+  text-align: center;
+  color: #b91c1c;
+  margin-bottom: 30px;
+}
+
+.contact-content {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.contact-info h3 {
+  color: #dc2626;
+  margin-top: 15px;
+}
+
+
+.contact-form {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.contact-form textarea {
+  height: 100px;
+  resize: none;
+}
+
+.contact-form button {
+  padding: 10px;
+  background: #dc2626;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #991b1b;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-container {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.contact-info {
+  animation: slideLeft 0.8s ease-in-out;
+}
+
+.contact-form {
+  animation: slideRight 0.8s ease-in-out;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 8px rgba(220, 38, 38, 0.4);
+  transform: scale(1.02);
+}
+
+.contact-form button {
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.4);
+}
+
+.contact-container:hover {
+  transform: translateY(-5px);
+  transition: 0.3s ease;
+}
