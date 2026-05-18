@@ -1,0 +1,36 @@
+/* Chatbot Floating Icon */
+
+.chatbot-button-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  width: 65px;
+  height: 65px;
+
+  background-color: #d40e0e;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 32px;
+  color: white;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+  transition: all 0.3s ease;
+
+  z-index: 1000;
+}
+
+/* Hover Effect */
+
+.chatbot-button-icon:hover {
+  transform: scale(1.1);
+  background-color: #1ebe5d;
+}

@@ -1,0 +1,202 @@
+/* Category Section */
+.category-section {
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.category-section h2 {
+  color: #a00000;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 18px;
+  border-bottom: 3px solid rgb(251, 171, 23);
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* Product Grid */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.product-grid .card {
+  flex: 1 1 calc(20% - 20px);   
+  max-width: calc(20% - 20px);
+}
+
+/* Product Card */
+.card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgb(251, 171, 23);
+}
+
+.card img {
+  width: 100%;
+  height: 170px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-size: 18px;
+  color: #333;
+  margin: 0 0 10px;
+}
+
+.card p {
+  color: #ff0000;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 14px;
+}
+
+.card button {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-radius: 6px;
+  background: #e5d5d1;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: #fb0404;
+}
+
+//* 🔘 Filter Buttons */
+.filter-buttons {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+/* Button Base */
+.filter-buttons button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 20px;
+  background: #f1f1f1;
+  color: #333;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.filter-buttons button:hover {
+  background: #a00000;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Active */
+.filter-buttons button.active {
+  background: #a00000;
+  color: white;
+  box-shadow: 0 4px 10px rgba(160, 0, 0, 0.4);
+}
+
+/* Kids Active */
+.filter-buttons .kids.active {
+  background: green;
+}
+
+/* Adult Active */
+.filter-buttons .adult.active {
+  background: red;
+}
+
+
+/* Category Section */
+.category-section {
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.category-section h2 {
+  color: #a00000;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 18px;
+  border-bottom: 3px solid rgb(251, 171, 23);
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* Grid */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Card Layout */
+.product-grid .card {
+  flex: 1 1 calc(20% - 20px);   
+  max-width: calc(20% - 20px);
+}
+
+/* Card */
+.card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgb(251, 171, 23);
+}
+
+.card img {
+  width: 100%;
+  height: 170px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-size: 18px;
+  color: #333;
+  margin: 0 0 10px;
+}
+
+.card p {
+  color: #ff0000;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 14px;
+}
+
+.card button {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-radius: 6px;
+  background: #e5d5d1;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: #fb0404;
+}

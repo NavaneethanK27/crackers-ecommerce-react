@@ -1,7 +1,33 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import logo from "../assets/Logo/logo.png";
 
 function Header() {
+  const [user, setUser] = useState(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const storedUser = sessionStorage.getItem("currentUser");
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    }
+    
+    const handleStorageChange = () => {
+      const updatedUser = sessionStorage.getItem("currentUser");
+      setUser(updatedUser ? JSON.parse(updatedUser) : null);
+    };
+    
+    window.addEventListener("login-event", handleStorageChange);
+    return () => window.removeEventListener("login-event", handleStorageChange);
+  }, []);
+
+  const handleLogout = () => {
+    sessionStorage.removeItem("currentUser");
+    window.dispatchEvent(new Event("login-event"));
+    setUser(null);
+    navigate("/");
+  };
+
   return (
     <>
       <div className="top-bar">
@@ -43,6 +69,21 @@ function Header() {
         <Link to="/quick">QUICK PURCHASE</Link>
         <Link to="/safety-tips">SAFETY TIPS</Link>
         <Link to="/contact">CONTACT US</Link>
+        {user ? (
+          <>
+            <span style={{ color: '#ff5722', fontWeight: 'bold', marginLeft: '10px' }}>
+              Welcome, {user.name} ({user.role})
+            </span>
+            <button 
+              onClick={handleLogout} 
+              style={{ background: 'transparent', border: 'none', color: '#333', cursor: 'pointer', fontWeight: 'bold', fontSize: '16px' }}
+            >
+              LOGOUT
+            </button>
+          </>
+        ) : (
+          <Link to="/login">LOGIN</Link>
+        )}
       </div>
     </>
   );

@@ -1,10 +1,16 @@
+import waicon from '../assets/Icons/WhatsApp.png'
 function ContactUs() {
+  const handlewhatsapponclick = ()=>{
+        const message = "Hello, I want to buy crackers";
+        window.open(`https://wa.me/8668125458?text=${encodeURIComponent(message)}`,
+      "_blank");
+  }
   return (
     <div className="contact-container">
       <h1 className="contact-title">Contact Us</h1>
 
       <div className="contact-content">
-        {/* Left - Contact Info */}
+       
         <div className="contact-info">
           <h3>📍 Address</h3>
           <p>
@@ -19,6 +25,9 @@ function ContactUs() {
           <p>+91 8668125458 / 9751660227</p>
 
           <h3>💬 WhatsApp</h3>
+          <button className='whatsappbutton' onClick={handlewhatsapponclick}>
+            <img className='whatsapp-icon' src={waicon} alt="" />
+          </button>
           <p>Chat with us for quick support</p>
         </div>
 

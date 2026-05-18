@@ -1,4 +1,5 @@
 function ProductCard({ name, price, image, item, addToCart }) {
+    
     return (
         <div className="card">
             <img src={image} alt={name} style={{ width: "120px" }} />
