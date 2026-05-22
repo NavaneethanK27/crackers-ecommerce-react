@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-
 function CartButton({ cartCount }) {
   const navigate = useNavigate();
  
